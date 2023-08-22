@@ -1,0 +1,8 @@
+pruebas.ipynb
+.ipynb_checkpoints/
+__pycache__/
+vars.txt
+tests/
+dashboards/__pycache__
+utils/__pycache__
+google-credentials.json

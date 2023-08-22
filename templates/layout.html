@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no,maximum-scale=1.0,width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/assets/img/icon.png"></link>
+      <title>Autodash App</title>
+  </head>
+<body>
+
+  <!--Navbar-->
+  <nav class = "navbar navbar-dark navbar-custom navbar-expand-lg navbar-light bg-light">
+    <a class= "navbar-brand" href="/">
+
+        <img src="/assets/img/logo-text-white.png" style="width:160px"></img>
+
+    </a>
+    <!--button responsive menu-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" >
+      <span class="navbar-toggler-icon navbar-dark"></span>
+    </button>
+    <!---->
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo011">
+
+        <ul class="nav navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="fas fa-user-plus" ></i>Home</a>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Views
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/link-view-1">View 1</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/login">
+              <i class="fas fa-user-plus" ></i>Logout</a>
+          </li>
+
+        </ul>
+      </div>
+
+  </nav>
+
+  <!--End Navbar-->
+    <div class="container">
+
+      <!--Title Section-->
+      <section class="titlesection row mt-2">
+        <!--h3>¡Pedido exitoso!</h3-->
+      </section>
+
+
+
+      <!--Section Form + Advertise-->
+      <div class="row general-row">
+      <!--Section Card-->
+      <div class="col-0 col-md-2 col-lg-2"></div>
+
+        <div class="card bg-light mb-2">
+
+            {%app_entry%}
+            {%config%}
+            {%scripts%}
+            {%renderer%}
+        </div>
+    <!-- END Section Form-->
+    <!-- END Section Form + Advertise-->
+
+      </div>
+    </div>
+
+    <!--Script-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<style>
+html {
+  height: 100%;
+  --primary-color: #000000;
+  --secondary-color: #6c2bd9;
+}
+
+#react-entry-point{
+  min-height: 500px;
+}
+
+body,  body .container{
+  min-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body .container{
+  max-width: 85% !important;
+  min-width: 350px !important;
+}
+
+.container .general-row, .container .general-row .card{
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  min-height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+div#_dash-app-content, div#page-content{
+    min-width: 90%;
+  }
+
+.navbar{
+  background-color:var(--primary-color) !important;
+  padding-left:10%;
+  padding-right:10%;
+}
+
+.dash-inside-container{
+  margin-top:5%;
+  margin-left:2%;
+  margin-right:2%;
+  margin-bottom:5%
+}
+
+button{
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:20px;
+  padding-right:20px;
+  border-radius: 100px;
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+button:hover, button:active{
+  background-color: var(--secondary-color);
+}
+
+button .export{
+  margin-bottom: 10px;
+}
+
+.centered{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align:center;
+}
+
+.title{
+  text-align: center !important;
+  color:var(--primary-color);
+  font-size:28px;
+}
+
+.login-username-input {
+  margin-left:auto;
+  margin-right:auto;
+  width:55%;
+  height:45px;
+  padding:10px;
+  margin-top:40px;
+  font-size:16px;
+  border-width:3px;
+  border-color:var(--primary-color);
+  border-radius:50px;
+  min-width: 250px;
+}
+
+.login-password-input {
+  margin-left:auto;
+  margin-right:auto;
+  width:55%;
+  height:45px;
+  padding:10px;
+  margin-top:10px;
+  font-size:16px;
+  border-width:3px;
+  border-color:var(--primary-color);
+  border-radius:50px;
+  min-width: 250px;
+}
+
+#btn-login, #btn-password {
+  min-width:150px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:30px;
+  display:block
+}
+
+#btn-login-reset, #btn-login-create{
+  min-width:150px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:10px;
+  display:block;
+  background-color: #FFFFFF00;
+  color: blue;
+  text-decoration-line: underline;
+  border-width: 0px;
+}
+
+#btn-login-reset:hover, #btn-login-create:hover, #btn-login-reset:active, #btn-login-create:active{
+  border-width: 0px;
+}
+
+.home-col-link {
+    padding: 20px 10px 20px 10px;
+    text-align:center;
+}
+
+.home-link{
+  padding:15px 0px 15px 0px;
+  width:100% !important;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  color:white;
+  font-size:20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+
+.home-link:hover, .home-link:active{
+    top: -5px;
+}
+
+
+
+  .GPO-col{
+    width:100% !important
+  }
+  div#_dash-app-content, div#page-content{
+      min-width: 100%;
+    }
+}
+.dt-table-container__row{
+  margin-top:5px;
+}
+
+.dash-table-container .previous-next-container{
+  width:300px
+}
+
+.inputs-row{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: block;
+}
+
+.inputs-row-row{
+  padding: 5px;
+  border: solid;
+  border-width: 1px;
+  border-color: gray;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+.input-col{
+    min-width: 200px;
+    flex: 100;
+    margin:10px;
+}
+
+.iframe-pdfs{
+  margin: 10px;
+  width: 100%;
+  height: 700px;
+}
+
+.form-questions-group-col{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #cf3f7c8c
+}
+.form-element{
+  padding-bottom:25px;
+}
+
+.modal .btn-close{
+  color:white;
+  margin:0px;
+  padding: 5px 10px 5px 10px;
+}
+
+.modal .btn-close:before{
+  content: "x";
+  font-size:10px;
+}
+
+.flex-stretch{
+  display:flex;
+  align-items:stretch;
+}
+
+.dash-virtualized .dt-table-container__row .dash-fixed-content{
+  width:95% !important;
+  max-width: 95% !important;
+  min-height:250px !important;
+}
+
+.main-svg {
+    background-color: #FFFFFF00 !important;
+}
+
+.text-button{
+  margin: 0px;
+  padding: 0px;
+  background-color: #FFFFFF00;
+  color: blue;
+  text-decoration: underline;
+  border-width: 0px;
+}
+
+.text-button:hover, .text-button:active{
+  margin: 0px;
+  padding: 0px;
+  background-color: #FFFFFF00;
+  color: blue;
+  text-decoration: underline;
+  border-width: 0px !important;
+}
+
+.collapse-button{
+  width: 90%;
+  text-align: left;
+}
+
+.collapse-card{
+  margin-top: 5px;
+}
+
+.modal-info{
+  width: 75%;
+  max-width: 850px;
+  min-width: 300px;
+}
+
+.row{
+  max-width: 100% !important;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.card-popi{
+  max-width: 250px;
+  margin: 5px;
+}
+
+.card-value{
+  color:#000000;
+  font-size:32px;
+  margin-left:auto;
+  margin-right:auto;
+  font-weight: 500;
+}
+
+</style>
