@@ -3,6 +3,8 @@ import base64
 from io import StringIO, BytesIO
 from dash import html, dcc
 from datetime import timedelta
+import dash_bootstrap_components as dbc
+
 
 def dropdown(id, options=[], value=[], multi=False, placeholder=""):
     dropdown = html.Div(
@@ -50,3 +52,13 @@ def parse_contents(contents, filename, date):
     except Exception as e:
         print(e)
         return None
+
+
+def format_fig(fig):
+    return dbc.Col(
+                    dcc.Graph(
+                                figure=fig
+                            )
+                    , width=12
+                    , style={"padding":"5px"}
+                    )
